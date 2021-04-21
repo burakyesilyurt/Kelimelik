@@ -1,25 +1,37 @@
-const words = document.getElementById("words");
+const word = document.getElementById("word");
 const translation = document.getElementById("translation");
+const btn = document.getElementById("btn");
 
-let usedWords =["Hi","Ready","Join"];
-let turkishWord = ["Merhaba","Hazır","Katılmak"]
 
-function wordRandomize(wordCard){
-  return Math.floor((Math.random() * wordCard));
+let words = [
+  {
+    english: "Hi",
+    turkish: "Merhaba"
+  },{
+    english: "Ready",
+    turkish: "Hazır"
+  },{
+    english: "Join",
+    turkish: "Katılmak"
+  }
+]
+
+let randomGet;
+
+const wordRandomize = function(){
+  let giveNumber = Math.floor((Math.random() * words.length));
+  while(giveNumber === randomGet){
+     giveNumber = Math.floor((Math.random() * words.length));
+     if(giveNumber !== randomGet){
+       break
+     }
+  } return giveNumber
 }
 
-function wordSelector(){
 
-let pickWord = wordRandomize(usedWords.length)
-
-let english = usedWords[pickWord];
-let turkish = turkishWord[pickWord];
-
-words.innerHTML="<p>" + english + "</p>";
-translation.innerHTML="<p>" + turkish + "</p>";
-
-}
-
-
-
+btn.addEventListener("click",function(){
+  randomGet = wordRandomize()
+  word.innerHTML = "<p>" + words[randomGet].turkish + "</p>";
+  translation.innerHTML = "<p>" + words[randomGet].english + "</p>";
+})
 
