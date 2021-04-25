@@ -3,19 +3,6 @@ const translation = document.getElementById("translation");
 const btn = document.getElementById("btn");
 
 
-let words = [
-  {
-    english: "Hi",
-    turkish: "Merhaba"
-  },{
-    english: "Ready",
-    turkish: "Hazır"
-  },{
-    english: "Join",
-    turkish: "Katılmak"
-  }
-]
-
 let randomGet;
 
 const wordRandomize = function(){
