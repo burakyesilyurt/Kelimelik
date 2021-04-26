@@ -3,23 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="term-style.css">
   <title>Add Word</title>
 </head>
 
 <body>
-  <h1>Hi</h1>
-  <h2>Add word for random word generator</h2>
-  <a href="../index.html" style="font-size: 20px;">Return the main page</a>
-  <br>
-  <br>
+ <div class="nav-center focus-in-expand">
+   <h4>Kelimelik</h4>
+   <ul class="nav-links">
+     <li><a href="../index.html">English</a></li>
+     <li><a href="addTerm/term.html">Add Term</a></li>
+   </ul>
+ </div>
+  
+ <div class="container">
+    <h1>Add word for random word generator</h1>
+    <a href="../index.html" style="font-size: 20px;">Return the main page</a>
+    <br>
+    <br>
 
-<form id="inputSelector">
-  <input type="text" id="english" placeholder="Add a English Word" name="english">
-  <br><br>
-  <input type="text" id="turkish" placeholder="Add a Turkish Word" name="turkish" > 
-  <br><br>
-  <button>Add Words</button>
-</form>
+  <form id="inputSelector">
+    <input type="text" id="english" placeholder="Add a English Word" name="english">
+    <br><br>
+    <input type="text" id="turkish" placeholder="Add a Turkish Word" name="turkish" > 
+    <br><br>
+    <button>Add Words</button>
+  </form>
+</div>
 <script src="termFunction.js"></script>
 </body>
 </html>
