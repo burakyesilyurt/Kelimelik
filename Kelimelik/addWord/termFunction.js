@@ -16,7 +16,6 @@ if(termJSON !== null){
 
 document.querySelector("#inputSelector").addEventListener("submit", function(e){
   e.preventDefault()
-  console.log(e.target.elements.turkish.value)
   words.push({
     english:e.target.elements.english.value,
     turkish:e.target.elements.turkish.value
