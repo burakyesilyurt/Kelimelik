@@ -13,6 +13,11 @@ if(termJSON !== null){
   words = JSON.parse(termJSON)
 }
 
+const deleteWord = "Please click the Add Word for adding a new word"
+if(words.length === 3 && words[1].english.includes(deleteWord)){
+  words.splice(1,1)
+}
+
 
 document.querySelector("#inputSelector").addEventListener("submit", function(e){
   e.preventDefault()
