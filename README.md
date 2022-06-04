@@ -1,2 +1,2 @@
-# MyProjects
+# Kelimelik
 HTML-CSS-JS Projects
